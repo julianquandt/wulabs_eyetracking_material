@@ -21,7 +21,7 @@ To use the calibration routine yourself you have to follow two steps, which main
 First, to download the folders, click [HERE](https://github.com/julianquandt/wulabs_eyetracking_material/archive/refs/heads/main.zip).
 Once downloaded, extract the content and copy the folders as follows:
 
-1. Move the `eyetracker_calibrate_wulabs` folder to your psychopy directory.
+1. Copy the `eyetracker_calibrate_wulabs` folder to your psychopy directory.
    - For this, you need to find the Psychopy installation on your machine. To find out where it is, open the Psychopy Builder.
    - Click on `Help` in the menu and select `System Info...`
    - In the opened dialogue, search for `Python Info` and copy the part before the last \ (or / if you are on mac or linux)
