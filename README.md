@@ -22,15 +22,15 @@ First, to download the folders, click on the green `< > Code` button, and select
 Once downloaded, extract the content and copy the folders as follows:
 
 1. Move the `eyetracker_calibrate_wulabs` folder to your psychopy directory.
-   For this, you need to find the Psychopy installation on your machine. To find out where it is, open the Psychopy Builder.
-   Click on `Help` in the menu and select `System Info...`
-   In the opened dialogue, search for `Python Info` and copy the part before the last \ (or / if you are on mac or linux)
-   Paste the path to your file explorer (or navigate there manually).
-   Once you are in this folder, navigate to `Lib > site-packages > psychopy > experiment > routines`.
-   Copy the `eyetracker_calibrate_wulabs` (the entire folder, not just the content) here.
+   - For this, you need to find the Psychopy installation on your machine. To find out where it is, open the Psychopy Builder.
+   - Click on `Help` in the menu and select `System Info...`
+   - In the opened dialogue, search for `Python Info` and copy the part before the last \ (or / if you are on mac or linux)
+   - Paste the path to your file explorer (or navigate there manually).
+   - Once you are in this folder, navigate to `Lib > site-packages > psychopy > experiment > routines`.
+   - Copy the `eyetracker_calibrate_wulabs` (the entire folder, not just the content) here.
 2. Navigate back, until you are in the `site-packages` folder again.
-   Once you are in this folder, copy and paste the `psychopy_eyetracker_tobii` folder here.
-   You will probably be asked if you want to replace existing files. Select `Replace files`.
+   - Once you are in this folder, copy and paste the `psychopy_eyetracker_tobii` folder here.
+   - You will probably be asked if you want to replace existing files. Select `Replace files`.
 
 Restart Psychopy.
 In the Builder, Psychopy should now show the new `Eyetracker Calibration WULABS` routine under the `Eyetracking` components on the right.
