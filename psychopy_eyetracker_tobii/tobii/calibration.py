@@ -294,7 +294,6 @@ class TobiiCalibrationProcedure(BaseCalibrationProcedure):
                 face_pos_coord = face_pos_x, -face_pos_y
                 self.facemask['live'].setPos(face_pos_coord)
             if not(math.isnan(pos_face[2]) or math.isnan(pos_face[5])):
-                print(pos_face[2], pos_face[5])
                 scale_face_z = (pos_face[5] + pos_face[2])/2*self.facemask['base'].size[0], (pos_face[5] + pos_face[2])/2*self.facemask['base'].size[1]
                 self.facemask['live'].size = scale_face_z
 
