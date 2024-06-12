@@ -1,6 +1,6 @@
 # Description
 
-__Important note: This was developed for Psychopy Version 2024.1.4 but should also work with newever Versions. For older versions the routine might not work. You can best download Version 2024.1.4 for [Windows](https://github.com/psychopy/psychopy/releases/download/2024.1.4/StandalonePsychoPy-2024.1.4-win64.exe) or [MAC](https://github.com/psychopy/psychopy/releases/download/2024.1.4/StandalonePsychoPy-2024.1.4-macOS.dmg) to make sure this works as expected.__
+__Important note: This was developed for Psychopy Version 2024.1.4 but should also work with newer Versions. For older versions the routine might not work. You can best download Version 2024.1.4 for [Windows](https://github.com/psychopy/psychopy/releases/download/2024.1.4/StandalonePsychoPy-2024.1.4-win64.exe) or [MAC](https://github.com/psychopy/psychopy/releases/download/2024.1.4/StandalonePsychoPy-2024.1.4-macOS.dmg) to make sure this works as expected.__
 
 These are the materials that are necessary to run EyeTracking Experiments in WULABS.
 The repository contains 2 folders and a powerpoint presentation.
