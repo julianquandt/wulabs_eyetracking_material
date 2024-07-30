@@ -24,7 +24,7 @@ class EyetrackerCalibrationRoutineWULABS(BaseStandaloneRoutine):
                  attempts = int(3), attemptBreak = int(1), passCriterion = "max_error", criterionValue = 0.2,
                  gaze_cursor = 'green', show_results_screen = False, save_results_screen = False,
                  disabled=False, 
-                 instruction_pages=["instruction_page1", "instruction_page2", "instruction_page3", "instruction_page4", "instruction_page5", "instruction_page6"],
+                 instruction_pages=["instruction_page1", "instruction_page2", "instruction_page3", "instruction_page4", "instruction_page5", "instruction_page6","instruction_page7", "instruction_page8"],
                  instruction_path = Path(__file__).parent
                  ):
         # Initialise base routine
@@ -396,6 +396,43 @@ class EyetrackerCalibrationRoutineWULABS(BaseStandaloneRoutine):
             "instr = visual.ImageStim(win, image=instrPages[nPage], units='norm', size=(2, 2))\n"
             "instr.draw()\n"
             "win.flip()\n"
+        )
+        # new part for last page is space
+
+        buff.writeIndentedLines(code % inits)
+        code = (
+            "if nPage == nPages - 1:\n"
+        )
+        buff.writeIndentedLines(code % inits)
+        buff.setIndentLevel(1, relative=True)
+        code = (
+            "resp = event.waitKeys(keyList=['c', 'left'])\n"
+            "if resp[0] == 'c':\n"
+        )
+        buff.writeIndentedLines(code % inits)
+        buff.setIndentLevel(1, relative=True)
+        code = (
+            "nPage += 1\n"
+            "event.clearEvents()\n"
+        )
+        buff.writeIndentedLines(code % inits)
+        buff.setIndentLevel(-1, relative=True)
+        code = (
+            "elif resp[0] == 'left':\n"
+        )
+        buff.writeIndentedLines(code % inits)
+        buff.setIndentLevel(1, relative=True)
+        code = (
+            "nPage -= 1\n"
+        )
+        buff.writeIndentedLines(code % inits)
+        buff.setIndentLevel(-2, relative=True)
+        code = (
+            "else:\n"
+        )
+        buff.writeIndentedLines(code % inits)
+        buff.setIndentLevel(1, relative=True)
+        code = (
             "resp = event.waitKeys(keyList=['left', 'right'])\n"
             "if resp[0] == 'left':\n"
         )
@@ -420,7 +457,7 @@ class EyetrackerCalibrationRoutineWULABS(BaseStandaloneRoutine):
             "nPage += 1\n"
         )
         buff.writeIndentedLines(code % inits)
-        buff.setIndentLevel(-2, relative=True)
+        buff.setIndentLevel(-3, relative=True)
 
         # start calibration
         code = (
@@ -446,7 +483,7 @@ class EyetrackerCalibrationRoutineWULABS(BaseStandaloneRoutine):
         buff.writeIndentedLines(code % inits)
         buff.setIndentLevel(1, relative=True)
         code = (
-            "text=msg, color=%(textColor)s, units=%(units)s, colorSpace=%(colorSpace)s,\n"
+            "text=msg, color=%(textColor)s, units='norm', colorSpace=%(colorSpace)s,\n"
             "pos=(0, 0), height=0.05, wrapWidth=1.5\n"
         )
         buff.writeIndentedLines(code % inits)
@@ -479,7 +516,7 @@ class EyetrackerCalibrationRoutineWULABS(BaseStandaloneRoutine):
         buff.writeIndentedLines(code % inits)
         buff.setIndentLevel(1, relative=True)
         code = (
-                "text=msg, color=%(textColor)s, units=%(units)s, colorSpace=%(colorSpace)s,\n"
+                "text=msg, color=%(textColor)s, units='norm', colorSpace=%(colorSpace)s,\n"
                 "pos=(0, 0), height=0.05, wrapWidth=1.5\n"
         )
         buff.writeIndentedLines(code % inits)
@@ -505,7 +542,7 @@ class EyetrackerCalibrationRoutineWULABS(BaseStandaloneRoutine):
         buff.writeIndentedLines(code % inits)
         buff.setIndentLevel(1, relative=True)
         code = (
-            "text=msg, color=%(textColor)s, units=%(units)s, colorSpace=%(colorSpace)s,\n"
+            "text=msg, color=%(textColor)s, units='norm', colorSpace=%(colorSpace)s,\n"
             "pos=(0, 0), height=0.05, wrapWidth=1.5\n"
         )
         buff.writeIndentedLines(code % inits)
